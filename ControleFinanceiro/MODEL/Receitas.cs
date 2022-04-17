@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace ControleFinanceiro.MODEL
 {
-    public class DespesasModel
+    public class Receitas
     {
-        public int id_despesa { get; set; }
+        public int id_receita { get; set; }
         public string nome { get; set; }
-        public string descricaosaida { get; set; }
-        public string valorsaida { get; set; }
+        public string descricaoentrada { get; set; }
+        public string valorentrada { get; set; }
         public DateTime data { get; set; }
+        public string receita_despesa { get; set; }
 
-        public int id_receita_fk { get; set; }
-       
 
     }
 }

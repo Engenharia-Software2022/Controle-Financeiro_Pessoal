@@ -23,11 +23,11 @@ namespace ControleFinanceiro.DAO
 
         #region método inserir receitas no banco
 
-        public void InserirReceitas(ReceitasModel obj)
+        public void InserirReceitas(Receitas obj)
         {
             try
             {
-                string sql = @"insert into receitas (nome, descricaoentrada, valorentrada,data, email, nivel_acesso) values (@nome,@descricaoentrada,@valorentrada,@data, @email, @nivel_acesso)";
+                string sql = @"insert into receitas (nome, descricaoentrada, valorentrada,data, receita_despesa) values (@nome,@descricaoentrada,@valorentrada,@data, @receita_despesa)";
 
 
                 //2 passo - organizar o sql
@@ -36,12 +36,8 @@ namespace ControleFinanceiro.DAO
                 cmd.Parameters.AddWithValue("@nome", obj.nome);
                 cmd.Parameters.AddWithValue("@descricaoentrada", obj.descricaoentrada);
                 cmd.Parameters.AddWithValue("@valorentrada", obj.valorentrada);
-                cmd.Parameters.AddWithValue("@data", obj.email);
-                cmd.Parameters.AddWithValue("@email", obj.data);
-
-                cmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
-
-
+                cmd.Parameters.AddWithValue("@data", obj.data);
+                cmd.Parameters.AddWithValue("@receita_despesa", obj.receita_despesa);
 
                 conexao.Open();
 
@@ -64,7 +60,7 @@ namespace ControleFinanceiro.DAO
 
         #region método alterar receitas no banco
 
-        public void AlterarReceitas(ReceitasModel obj)
+        public void AlterarReceitas(Receitas obj)
         {
             try
             {
@@ -78,7 +74,7 @@ namespace ControleFinanceiro.DAO
                 cmd.Parameters.AddWithValue("@descricaoentrada", obj.descricaoentrada);
                 cmd.Parameters.AddWithValue("@valorentrada", obj.valorentrada);
                 cmd.Parameters.AddWithValue("@data", obj.data);
-                cmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
+                cmd.Parameters.AddWithValue("@receita_despesa", obj.receita_despesa);
 
                 conexao.Open();
 
@@ -101,7 +97,7 @@ namespace ControleFinanceiro.DAO
 
         #region método excluir receita do banco
 
-        public void excluir(ReceitasModel obj)
+        public void excluir(Receitas obj)
         {
             try
             {
@@ -286,6 +282,10 @@ namespace ControleFinanceiro.DAO
 
 
         #endregion
+
+
+
+        
 
 
     }

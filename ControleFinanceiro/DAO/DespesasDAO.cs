@@ -23,7 +23,7 @@ namespace ControleFinanceiro.DAO
 
         #region método inserir despesas no banco
 
-        public void InserirDespesas(DespesasModel obj)
+        public void InserirDespesas(Despesas obj)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace ControleFinanceiro.DAO
 
         #region método alterar despesas no banco
 
-        public void AlterarDespesas(DespesasModel obj)
+        public void AlterarDespesas(Despesas obj)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace ControleFinanceiro.DAO
 
         #region método excluir despesa do banco
 
-        public void excluirDespesa(DespesasModel obj)
+        public void excluirDespesa(Despesas obj)
         {
             try
             {
