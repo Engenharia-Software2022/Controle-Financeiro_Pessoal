@@ -100,15 +100,15 @@ namespace ControleFinanceiro.DAO
 
         #region método excluir receita do banco
 
-        public void excluir(Receitas obj)
+        public void Excluir(Receitas obj)
         {
             try
             {
-                string sql = @"delete from recitas where id_receitas = @id";
+                string sql = @"delete from receitas where id_receita = @id_receita";
 
                 //2 passo - organizar o sql
                 SqlCommand cmd = new SqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@id", obj.id_receita);
+                cmd.Parameters.AddWithValue("@id_receita", obj.id_receita);
 
                 conexao.Open();
 
@@ -238,11 +238,11 @@ namespace ControleFinanceiro.DAO
         {
 
             //1 passo - comando sql
-            string sql = @"select * from receitas where nome = @nome";
+            string sql = @"select * from receitas where data = @data";
 
             //2 passo - organizar o sql
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@nome", nome);
+            cmd.Parameters.AddWithValue("@data", data);
 
             //3 passo - abcmdrir a conexao e executar o comando                
             conexao.Open();

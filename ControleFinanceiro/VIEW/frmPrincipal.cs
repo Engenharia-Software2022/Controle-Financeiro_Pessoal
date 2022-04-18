@@ -1,5 +1,6 @@
 ﻿using ControleFinanceiro.DAO;
 using ControleFinanceiro.MODEL;
+using ControleFinanceiro.VIEW;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace ControleFinanceiro
 
         }
 
+        #region Botão Cadastrar
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             if (cbNomes.Text == "" || txbDescricao.Text == "" || cbSelecionar_rec_des.Text == "" || txbValor.Text == "" || dtpData.Text == "")
@@ -54,11 +56,21 @@ namespace ControleFinanceiro
 
         }
 
+        #endregion
+
+
+        #region Listando Receitas no datagridview
+
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             ReceitasDAO dao = new ReceitasDAO();
             dgvFinancas.DataSource = dao.ListarTodasReceitas();
         }
+
+        #endregion
+
+
+        #region Método limpar campos
 
         private void LimparCampos() 
         {
@@ -69,6 +81,10 @@ namespace ControleFinanceiro
             cbSelecionar_rec_des.Text = "";
         }
 
+        #endregion
+
+
+        #region Carregando os dados do datagridview para os textbox clicando no item do datagridview
         private void dgvFinancas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Carregando os dados do datagridview para os textbox clicando no item do datagridview
@@ -82,6 +98,10 @@ namespace ControleFinanceiro
 
         }
 
+        #endregion
+
+
+        #region Botão alterar
         private void btnAlterarReceita_Click(object sender, EventArgs e)
         {
             if (cbNomes.Text == "" || txbDescricao.Text == "" || cbSelecionar_rec_des.Text == "" || txbValor.Text == "" || dtpData.Text == "")
@@ -110,8 +130,45 @@ namespace ControleFinanceiro
 
                 //atualiza o datagridview
                 dgvFinancas.DataSource = dao.ListarTodasReceitas();
-            }
+            } 
 
         }
+
+        #endregion
+
+
+        #region botão excluir
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (cbNomes.Text == "" || txbDescricao.Text == "" || cbSelecionar_rec_des.Text == "" || txbValor.Text == "" || dtpData.Text == "")
+            {
+                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
+                LimparCampos();
+
+            }
+            else
+            {
+                Receitas obj = new Receitas();
+
+                obj.id_receita = int.Parse(txbCodigo.Text);
+
+                ReceitasDAO dao = new ReceitasDAO();
+                dao.Excluir(obj);
+                dgvFinancas.DataSource = dao.ListarTodasReceitas();
+            }
+        }
+
+        #endregion
+
+
+        #region botão relatório
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            frmRelatorio frm = new frmRelatorio();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        #endregion
     }
 }
