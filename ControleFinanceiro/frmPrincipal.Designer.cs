@@ -42,13 +42,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbNomes = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnAlterarReceita = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinancas)).BeginInit();
             this.SuspendLayout();
             // 
             // txbValor
             // 
             this.txbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbValor.Location = new System.Drawing.Point(545, 138);
+            this.txbValor.Location = new System.Drawing.Point(508, 141);
             this.txbValor.Name = "txbValor";
             this.txbValor.Size = new System.Drawing.Size(203, 26);
             this.txbValor.TabIndex = 0;
@@ -60,7 +63,7 @@
             this.cbSelecionar_rec_des.Items.AddRange(new object[] {
             "RECEITAS",
             "DESPESAS"});
-            this.cbSelecionar_rec_des.Location = new System.Drawing.Point(545, 94);
+            this.cbSelecionar_rec_des.Location = new System.Drawing.Point(508, 97);
             this.cbSelecionar_rec_des.Name = "cbSelecionar_rec_des";
             this.cbSelecionar_rec_des.Size = new System.Drawing.Size(203, 28);
             this.cbSelecionar_rec_des.TabIndex = 1;
@@ -69,7 +72,7 @@
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(173, 94);
+            this.dtpData.Location = new System.Drawing.Point(130, 94);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(198, 26);
             this.dtpData.TabIndex = 2;
@@ -78,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 97);
+            this.label1.Location = new System.Drawing.Point(65, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 3;
@@ -89,7 +92,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(454, 141);
+            this.label2.Location = new System.Drawing.Point(417, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 4;
@@ -99,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 144);
+            this.label3.Location = new System.Drawing.Point(29, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 6;
@@ -108,7 +111,7 @@
             // txbDescricao
             // 
             this.txbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDescricao.Location = new System.Drawing.Point(173, 141);
+            this.txbDescricao.Location = new System.Drawing.Point(130, 141);
             this.txbDescricao.Name = "txbDescricao";
             this.txbDescricao.Size = new System.Drawing.Size(198, 26);
             this.txbDescricao.TabIndex = 5;
@@ -117,7 +120,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(386, 99);
+            this.label4.Location = new System.Drawing.Point(349, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 20);
             this.label4.TabIndex = 7;
@@ -136,16 +139,20 @@
             // 
             // dgvFinancas
             // 
+            this.dgvFinancas.AllowUserToAddRows = false;
+            this.dgvFinancas.AllowUserToDeleteRows = false;
             this.dgvFinancas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFinancas.Location = new System.Drawing.Point(12, 186);
             this.dgvFinancas.Name = "dgvFinancas";
+            this.dgvFinancas.ReadOnly = true;
             this.dgvFinancas.Size = new System.Drawing.Size(776, 150);
             this.dgvFinancas.TabIndex = 9;
+            this.dgvFinancas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinancas_CellClick);
             // 
             // btnRelatorio
             // 
             this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio.Location = new System.Drawing.Point(378, 367);
+            this.btnRelatorio.Location = new System.Drawing.Point(530, 367);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(132, 37);
             this.btnRelatorio.TabIndex = 10;
@@ -156,7 +163,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 50);
+            this.label5.Location = new System.Drawing.Point(364, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 12;
@@ -170,7 +177,7 @@
             "Marcos Antonio Garcia",
             "Ana Lúcia Batista Garcia",
             "Samuel Gomes da Silva"});
-            this.cbNomes.Location = new System.Drawing.Point(173, 47);
+            this.cbNomes.Location = new System.Drawing.Point(508, 53);
             this.cbNomes.Name = "cbNomes";
             this.cbNomes.Size = new System.Drawing.Size(198, 28);
             this.cbNomes.TabIndex = 11;
@@ -180,17 +187,50 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label6.Location = new System.Drawing.Point(585, 20);
+            this.label6.Location = new System.Drawing.Point(647, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 37);
             this.label6.TabIndex = 13;
             this.label6.Text = "10:34:36";
+            // 
+            // btnAlterarReceita
+            // 
+            this.btnAlterarReceita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarReceita.Location = new System.Drawing.Point(375, 367);
+            this.btnAlterarReceita.Name = "btnAlterarReceita";
+            this.btnAlterarReceita.Size = new System.Drawing.Size(132, 37);
+            this.btnAlterarReceita.TabIndex = 14;
+            this.btnAlterarReceita.Text = "Alterar";
+            this.btnAlterarReceita.UseVisualStyleBackColor = true;
+            this.btnAlterarReceita.Click += new System.EventHandler(this.btnAlterarReceita_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(61, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Codigo:";
+            // 
+            // txbCodigo
+            // 
+            this.txbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCodigo.Location = new System.Drawing.Point(130, 52);
+            this.txbCodigo.Name = "txbCodigo";
+            this.txbCodigo.ReadOnly = true;
+            this.txbCodigo.Size = new System.Drawing.Size(52, 26);
+            this.txbCodigo.TabIndex = 15;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txbCodigo);
+            this.Controls.Add(this.btnAlterarReceita);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbNomes);
@@ -230,6 +270,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.ComboBox cbNomes;
+        private System.Windows.Forms.Button btnAlterarReceita;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbCodigo;
     }
 }
 

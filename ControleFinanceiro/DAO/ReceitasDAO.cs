@@ -64,7 +64,7 @@ namespace ControleFinanceiro.DAO
         {
             try
             {
-                string sql = @"update receitas set nome = @nome, descricaoentrada = @descricaoentrada, valorentrada = @valorentrada,data = @data, nivel_acesso = @nivel_acesso where id_receita = @id";
+                string sql = @"update receitas set nome = @nome, descricaoentrada = @descricaoentrada, valorentrada = @valorentrada,data = @data, receita_despesa = @receita_despesa where id_receita = @id_receita";
 
 
                 //2 passo - organizar o sql
@@ -75,6 +75,9 @@ namespace ControleFinanceiro.DAO
                 cmd.Parameters.AddWithValue("@valorentrada", obj.valorentrada);
                 cmd.Parameters.AddWithValue("@data", obj.data);
                 cmd.Parameters.AddWithValue("@receita_despesa", obj.receita_despesa);
+
+                cmd.Parameters.AddWithValue("@id_receita", obj.id_receita);
+
 
                 conexao.Open();
 
