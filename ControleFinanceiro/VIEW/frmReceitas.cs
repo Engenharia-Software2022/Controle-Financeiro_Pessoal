@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace ControleFinanceiro
 {
-    public partial class frmPrincipal : Form
+    public partial class frmReceitas : Form
     {
-        public frmPrincipal()
+        public frmReceitas()
         {
             InitializeComponent();
         }
@@ -61,11 +61,7 @@ namespace ControleFinanceiro
 
         #region Listando Receitas no datagridview
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            ReceitasDAO dao = new ReceitasDAO();
-            dgvFinancas.DataSource = dao.ListarTodasReceitas();
-        }
+       
 
         #endregion
 
@@ -85,18 +81,7 @@ namespace ControleFinanceiro
 
 
         #region Carregando os dados do datagridview para os textbox clicando no item do datagridview
-        private void dgvFinancas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Carregando os dados do datagridview para os textbox clicando no item do datagridview
-
-            txbCodigo.Text = dgvFinancas.CurrentRow.Cells[0].Value.ToString();
-            cbNomes.Text = dgvFinancas.CurrentRow.Cells[1].Value.ToString();
-            txbDescricao.Text = dgvFinancas.CurrentRow.Cells[2].Value.ToString();
-            txbValor.Text = dgvFinancas.CurrentRow.Cells[3].Value.ToString();
-            dtpData.Text = dgvFinancas.CurrentRow.Cells[4].Value.ToString();
-            cbSelecionar_rec_des.Text = dgvFinancas.CurrentRow.Cells[5].Value.ToString();   
-
-        }
+       
 
         #endregion
 
@@ -170,5 +155,36 @@ namespace ControleFinanceiro
         }
 
         #endregion
+
+        private void frmReceitas_Load(object sender, EventArgs e)
+        {
+            ReceitasDAO dao = new ReceitasDAO();
+            dgvFinancas.DataSource = dao.ListarTodasReceitas();
+        }
+
+        private void dgvFinancas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Carregando os dados do datagridview para os textbox clicando no item do datagridview
+
+            txbCodigo.Text = dgvFinancas.CurrentRow.Cells[0].Value.ToString();
+            cbNomes.Text = dgvFinancas.CurrentRow.Cells[1].Value.ToString();
+            txbDescricao.Text = dgvFinancas.CurrentRow.Cells[2].Value.ToString();
+            txbValor.Text = dgvFinancas.CurrentRow.Cells[3].Value.ToString();
+            dtpData.Text = dgvFinancas.CurrentRow.Cells[4].Value.ToString();
+            cbSelecionar_rec_des.Text = dgvFinancas.CurrentRow.Cells[5].Value.ToString();
+            //cbSelecionar_rec_des.Text = dgvFinancas.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmMenu frmMenu = new frmMenu();
+            frmMenu.Show();
+            this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

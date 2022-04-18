@@ -13,9 +13,8 @@ namespace ControleFinanceiro.MODEL
         public string descricaosaida { get; set; }
         public string valorsaida { get; set; }
         public DateTime data { get; set; }
-
-        public int id_receita_fk { get; set; }
-       
-
+        public DateTime data_inicio { get; set; }
+        public DateTime data_fim { get; set; }
+  
     }
 }

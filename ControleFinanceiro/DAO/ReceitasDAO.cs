@@ -232,37 +232,9 @@ namespace ControleFinanceiro.DAO
         }
 
 
-        #region Consultar receitas por nome
+        #region Consultar receitas por periodo
 
-        public DataTable ConsultarReceitasPorNome(string nome)
-        {
-
-            //1 passo - comando sql
-            string sql = @"select * from receitas where data = @data";
-
-            //2 passo - organizar o sql
-            SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@data", data);
-
-            //3 passo - abcmdrir a conexao e executar o comando                
-            conexao.Open();
-            cmd.ExecuteNonQuery();
-
-            //4 passo - criar o MySQLDataAdapter
-            DataTable tabelaReceitas = new DataTable();
-
-            //5 passo - criar o DataTable
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            da.Fill(tabelaReceitas);
-
-            //fechar conexão
-            conexao.Close();
-
-            //Retornar o DataTable com os dados
-            return tabelaReceitas;
-
-        }
+        
 
 
 

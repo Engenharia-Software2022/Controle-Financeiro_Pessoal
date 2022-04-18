@@ -75,11 +75,23 @@
     <Compile Include="Conexao\ConnectionFactory.cs" />
     <Compile Include="DAO\DespesasDAO.cs" />
     <Compile Include="DAO\ReceitasDAO.cs" />
-    <Compile Include="VIEW\frmPrincipal.cs">
+    <Compile Include="VIEW\frmDespesas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="VIEW\frmDespesas.Designer.cs">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmReceitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmReceitas.Designer.cs">
+      <DependentUpon>frmReceitas.cs</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Receitas.cs" />
     <Compile Include="MODEL\Despesas.cs" />
@@ -91,8 +103,14 @@
     <Compile Include="VIEW\frmRelatorio.Designer.cs">
       <DependentUpon>frmRelatorio.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VIEW\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\frmDespesas.resx">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmReceitas.resx">
+      <DependentUpon>frmReceitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace ControleFinanceiro
 {
-    partial class frmPrincipal
+    partial class frmReceitas
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -46,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txbCodigo = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinancas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,8 +64,7 @@
             this.cbSelecionar_rec_des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSelecionar_rec_des.FormattingEnabled = true;
             this.cbSelecionar_rec_des.Items.AddRange(new object[] {
-            "RECEITAS",
-            "DESPESAS"});
+            "RECEITAS"});
             this.cbSelecionar_rec_des.Location = new System.Drawing.Point(508, 107);
             this.cbSelecionar_rec_des.Name = "cbSelecionar_rec_des";
             this.cbSelecionar_rec_des.Size = new System.Drawing.Size(203, 28);
@@ -236,11 +237,35 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // frmPrincipal
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(12, 9);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(120, 37);
+            this.btnVoltar.TabIndex = 18;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(163, 9);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(120, 37);
+            this.btnSair.TabIndex = 19;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // frmReceitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbCodigo);
@@ -259,9 +284,9 @@
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.cbSelecionar_rec_des);
             this.Controls.Add(this.txbValor);
-            this.Name = "frmPrincipal";
+            this.Name = "frmReceitas";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.Load += new System.EventHandler(this.frmReceitas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinancas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,6 +313,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbCodigo;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

@@ -14,7 +14,10 @@ namespace ControleFinanceiro.MODEL
         public string valorentrada { get; set; }
         public DateTime data { get; set; }
         public string receita_despesa { get; set; }
+        public DateTime data_inicio { get; set; }
+        public DateTime data_fim { get; set; }
 
+        public int id_despesa_fk { get; set; }
 
     }
 }

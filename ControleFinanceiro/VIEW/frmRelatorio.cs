@@ -20,17 +20,11 @@ namespace ControleFinanceiro.VIEW
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            ReceitasDAO dao = new ReceitasDAO();
+            
 
-            string nome = mtbDataInicial.Text;
+           
 
-            dgvRelatorio.DataSource = dao.ConsultarReceitasPorNome(nome);
-
-            if (dgvRelatorio.Rows.Count <= 0)
-            {
-                MessageBox.Show("Nenhum Cliente encontrado!");
-                dgvRelatorio.DataSource = dao.ListarTodasReceitas();
-            }
+            
         }
     }
 }

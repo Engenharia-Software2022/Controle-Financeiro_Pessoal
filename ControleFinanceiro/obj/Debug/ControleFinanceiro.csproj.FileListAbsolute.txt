@@ -11,10 +11,13 @@ C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\Sy
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.csproj.AssemblyReference.cache
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.csproj.SuggestedBindingRedirects.cache
-C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.frmPrincipal.resources
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.Properties.Resources.resources
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.csproj.GenerateResource.cache
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.csproj.CoreCompileInputs.cache
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.csproj.CopyComplete
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.exe
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.pdb
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmDespesas.resources
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.frmReceitas.resources
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmRelatorio.resources
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmMenu.resources

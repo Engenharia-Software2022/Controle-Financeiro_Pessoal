@@ -34,8 +34,8 @@ namespace ControleFinanceiro.DAO
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 cmd.Parameters.AddWithValue("@nome", obj.nome);
-                cmd.Parameters.AddWithValue("@descricaoentrada", obj.descricaosaida);
-                cmd.Parameters.AddWithValue("@valorentrada", obj.valorsaida);
+                cmd.Parameters.AddWithValue("@descricaosaida", obj.descricaosaida);
+                cmd.Parameters.AddWithValue("@valorsaida", obj.valorsaida);
                 cmd.Parameters.AddWithValue("@data", obj.data);
                 //cmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
 
@@ -45,7 +45,7 @@ namespace ControleFinanceiro.DAO
                 //4 passo - fechar a conexao
                 conexao.Close();
 
-                MessageBox.Show("Despasa inserida com sucesso!");
+                MessageBox.Show("Despesa inserida com sucesso!");
             }
             catch (Exception erro)
             {
