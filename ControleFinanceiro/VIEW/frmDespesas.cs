@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ControleFinanceiro.DAO;
+using ControleFinanceiro.MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +31,34 @@ namespace ControleFinanceiro.VIEW
         {
             Application.Exit();
 
+        }
+
+        private void btnCadastrarDespesa_Click(object sender, EventArgs e)
+        {
+            if (cbTitularDespesa.Text == "" || txbDescricaoDespesa.Text == "" || cbSelecionarDespesa.Text == "" || txbValorDespesa.Text == "" || dtpDataDespesa.Text == "")
+            {
+                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
+               // LimparCampos();
+
+            }
+            else
+            {
+                Despesas  obj = new Despesas();
+
+                obj.nome = cbTitularDespesa.Text;
+                obj.descricaosaida = txbDescricaoDespesa.Text;
+                obj.valorsaida = txbValorDespesa.Text;
+                obj.selecionarsaida = cbSelecionarDespesa.Text;
+                obj.datasaida = Convert.ToDateTime(dtpDataDespesa.Text);
+                
+
+                DespesasDAO dao = new DespesasDAO();
+                dao.InserirDespesas(obj);
+
+                //LimparCampos();
+
+                dgvDespesas.DataSource = dao.ListarTodasDespesas();
+            }
         }
     }
 }

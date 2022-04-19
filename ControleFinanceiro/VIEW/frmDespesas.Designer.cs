@@ -44,7 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDataDespesa = new System.Windows.Forms.DateTimePicker();
             this.cbSelecionarDespesa = new System.Windows.Forms.ComboBox();
-            this.txbValorDrespesa = new System.Windows.Forms.TextBox();
+            this.txbValorDespesa = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).BeginInit();
@@ -143,6 +143,7 @@
             this.btnCadastrarDespesa.TabIndex = 26;
             this.btnCadastrarDespesa.Text = "Cadastrar";
             this.btnCadastrarDespesa.UseVisualStyleBackColor = true;
+            this.btnCadastrarDespesa.Click += new System.EventHandler(this.btnCadastrarDespesa_Click);
             // 
             // label4
             // 
@@ -206,19 +207,19 @@
             this.cbSelecionarDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSelecionarDespesa.FormattingEnabled = true;
             this.cbSelecionarDespesa.Items.AddRange(new object[] {
-            "RECEITAS"});
+            "DESPESAS"});
             this.cbSelecionarDespesa.Location = new System.Drawing.Point(539, 126);
             this.cbSelecionarDespesa.Name = "cbSelecionarDespesa";
             this.cbSelecionarDespesa.Size = new System.Drawing.Size(203, 28);
             this.cbSelecionarDespesa.TabIndex = 19;
             // 
-            // txbValorDrespesa
+            // txbValorDespesa
             // 
-            this.txbValorDrespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbValorDrespesa.Location = new System.Drawing.Point(539, 164);
-            this.txbValorDrespesa.Name = "txbValorDrespesa";
-            this.txbValorDrespesa.Size = new System.Drawing.Size(203, 26);
-            this.txbValorDrespesa.TabIndex = 18;
+            this.txbValorDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbValorDespesa.Location = new System.Drawing.Point(539, 164);
+            this.txbValorDespesa.Name = "txbValorDespesa";
+            this.txbValorDespesa.Size = new System.Drawing.Size(203, 26);
+            this.txbValorDespesa.TabIndex = 18;
             // 
             // btnSair
             // 
@@ -265,7 +266,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpDataDespesa);
             this.Controls.Add(this.cbSelecionarDespesa);
-            this.Controls.Add(this.txbValorDrespesa);
+            this.Controls.Add(this.txbValorDespesa);
             this.Name = "frmDespesas";
             this.Text = "frmDespesas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).EndInit();
@@ -292,7 +293,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpDataDespesa;
         private System.Windows.Forms.ComboBox cbSelecionarDespesa;
-        private System.Windows.Forms.TextBox txbValorDrespesa;
+        private System.Windows.Forms.TextBox txbValorDespesa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVoltar;
     }

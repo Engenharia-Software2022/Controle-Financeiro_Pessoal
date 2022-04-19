@@ -27,7 +27,7 @@ namespace ControleFinanceiro.DAO
         {
             try
             {
-                string sql = @"insert into despesas (nome, descricaosaida, valorsaida,data) values (@nome,@descricaosaida,@valorsaida,@data)";
+                string sql = @"insert into despesas (nome, descricaosaida, valorsaida, selecionarsaida, datasaida) values (@nome,@descricaosaida,@valorsaida, @selecionarsaida, @datasaida)";
 
 
                 //2 passo - organizar o sql
@@ -36,8 +36,9 @@ namespace ControleFinanceiro.DAO
                 cmd.Parameters.AddWithValue("@nome", obj.nome);
                 cmd.Parameters.AddWithValue("@descricaosaida", obj.descricaosaida);
                 cmd.Parameters.AddWithValue("@valorsaida", obj.valorsaida);
-                cmd.Parameters.AddWithValue("@data", obj.data);
-                //cmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
+                cmd.Parameters.AddWithValue("@selecionarsaida", obj.selecionarsaida);
+                cmd.Parameters.AddWithValue("@datasaida", obj.datasaida);
+                
 
                 conexao.Open();
 
@@ -64,7 +65,7 @@ namespace ControleFinanceiro.DAO
         {
             try
             {
-                string sql = @"update despesas set nome = @nome, descricaosaida = @descricaosaida, valorsaida = @valorsaida,data = @data where id_receita = @id";
+                string sql = @"update despesas set nometitular = @nometitular, descricaosaida = @descricaosaida, valorsaida = @valorsaida, selecionarsaida = @selecionarsaida, datasaida = @datasaida where id_receita = @id";
 
 
                 //2 passo - organizar o sql
@@ -73,7 +74,8 @@ namespace ControleFinanceiro.DAO
                 cmd.Parameters.AddWithValue("@nome", obj.nome);
                 cmd.Parameters.AddWithValue("@descricaosaida", obj.descricaosaida);
                 cmd.Parameters.AddWithValue("@valorsaida", obj.valorsaida);
-                cmd.Parameters.AddWithValue("@data", obj.data);
+                cmd.Parameters.AddWithValue("@selecionarsaida", obj.selecionarsaida);
+                cmd.Parameters.AddWithValue("@datasaida", obj.datasaida);
                 //cmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
 
                 conexao.Open();
@@ -170,11 +172,11 @@ namespace ControleFinanceiro.DAO
         {
 
             //1 passo - comando sql
-            string sql = @"select * from despesas where nome = @nome";
+            string sql = @"select * from despesas where nometitular = @nometitular";
 
             //2 passo - organizar o sql
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("@nome", nome);
+            cmd.Parameters.AddWithValue("@nometitular", nome);
 
             //3 passo - abcmdrir a conexao e executar o comando                
             conexao.Open();

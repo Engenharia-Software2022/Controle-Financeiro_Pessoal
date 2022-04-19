@@ -9,15 +9,15 @@ namespace ControleFinanceiro.MODEL
     public class Receitas
     {
         public int id_receita { get; set; }
-        public string nome { get; set; }
+        public string nometitular { get; set; }
         public string descricaoentrada { get; set; }
         public string valorentrada { get; set; }
-        public DateTime data { get; set; }
-        public string receita_despesa { get; set; }
+        public string selecionarentrada { get; set; }
+        public DateTime dataentrada { get; set; }
         public DateTime data_inicio { get; set; }
         public DateTime data_fim { get; set; }
 
-        public int id_despesa_fk { get; set; }
+       
 
     }
 }

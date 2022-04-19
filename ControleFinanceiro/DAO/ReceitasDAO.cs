@@ -27,17 +27,17 @@ namespace ControleFinanceiro.DAO
         {
             try
             {
-                string sql = @"insert into receitas (nome, descricaoentrada, valorentrada,data, receita_despesa) values (@nome,@descricaoentrada,@valorentrada,@data, @receita_despesa)";
+                string sql = @"insert into receitas (nometitular, descricaoentrada, valorentrada,dataentrada, selecionarentrada) values (@nometitular,@descricaoentrada,@valorentrada,@dataentrada, @selecionarentrada)";
 
 
                 //2 passo - organizar o sql
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
-                cmd.Parameters.AddWithValue("@nome", obj.nome);
+                cmd.Parameters.AddWithValue("@nometitular", obj.nometitular);
                 cmd.Parameters.AddWithValue("@descricaoentrada", obj.descricaoentrada);
                 cmd.Parameters.AddWithValue("@valorentrada", obj.valorentrada);
-                cmd.Parameters.AddWithValue("@data", obj.data);
-                cmd.Parameters.AddWithValue("@receita_despesa", obj.receita_despesa);
+                cmd.Parameters.AddWithValue("@dataentrada", obj.dataentrada);
+                cmd.Parameters.AddWithValue("@selecionarentrada", obj.selecionarentrada);
 
                 conexao.Open();
 
@@ -64,17 +64,17 @@ namespace ControleFinanceiro.DAO
         {
             try
             {
-                string sql = @"update receitas set nome = @nome, descricaoentrada = @descricaoentrada, valorentrada = @valorentrada,data = @data, receita_despesa = @receita_despesa where id_receita = @id_receita";
+                string sql = @"update receitas set nometitular = @nometitular, descricaoentrada = @descricaoentrada, valorentrada = @valorentrada,dataentrada = @dataentrada, selecionarentrada = @selecionarentrada where id_receita = @id_receita";
 
 
                 //2 passo - organizar o sql
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
-                cmd.Parameters.AddWithValue("@nome", obj.nome);
+                cmd.Parameters.AddWithValue("@nometitular", obj.nometitular);
                 cmd.Parameters.AddWithValue("@descricaoentrada", obj.descricaoentrada);
                 cmd.Parameters.AddWithValue("@valorentrada", obj.valorentrada);
-                cmd.Parameters.AddWithValue("@data", obj.data);
-                cmd.Parameters.AddWithValue("@receita_despesa", obj.receita_despesa);
+                cmd.Parameters.AddWithValue("@dataentrada", obj.dataentrada);
+                cmd.Parameters.AddWithValue("@selecionarentrada", obj.selecionarentrada);
 
                 cmd.Parameters.AddWithValue("@id_receita", obj.id_receita);
 

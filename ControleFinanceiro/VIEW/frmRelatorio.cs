@@ -1,5 +1,4 @@
-﻿using ControleFinanceiro.DAO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,13 +17,10 @@ namespace ControleFinanceiro.VIEW
             InitializeComponent();
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
+        private void frmRelatorio_Load(object sender, EventArgs e)
         {
-            
 
-           
-
-            
+            this.reportViewer1.RefreshReport();
         }
     }
 }
