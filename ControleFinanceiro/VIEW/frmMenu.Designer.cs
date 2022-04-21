@@ -32,14 +32,13 @@
             this.btnLancarDespesas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnConsultarPeriodos = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_LancarReceitas
             // 
             this.btn_LancarReceitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LancarReceitas.Location = new System.Drawing.Point(32, 120);
+            this.btn_LancarReceitas.Location = new System.Drawing.Point(67, 120);
             this.btn_LancarReceitas.Name = "btn_LancarReceitas";
             this.btn_LancarReceitas.Size = new System.Drawing.Size(150, 74);
             this.btn_LancarReceitas.TabIndex = 0;
@@ -50,7 +49,7 @@
             // btnLancarDespesas
             // 
             this.btnLancarDespesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLancarDespesas.Location = new System.Drawing.Point(211, 120);
+            this.btnLancarDespesas.Location = new System.Drawing.Point(313, 120);
             this.btnLancarDespesas.Name = "btnLancarDespesas";
             this.btnLancarDespesas.Size = new System.Drawing.Size(150, 74);
             this.btnLancarDespesas.TabIndex = 1;
@@ -78,17 +77,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Versão: 1.0.0";
             // 
-            // btnConsultarPeriodos
-            // 
-            this.btnConsultarPeriodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarPeriodos.Location = new System.Drawing.Point(378, 120);
-            this.btnConsultarPeriodos.Name = "btnConsultarPeriodos";
-            this.btnConsultarPeriodos.Size = new System.Drawing.Size(150, 74);
-            this.btnConsultarPeriodos.TabIndex = 4;
-            this.btnConsultarPeriodos.Text = "Consulta Por Períodos";
-            this.btnConsultarPeriodos.UseVisualStyleBackColor = true;
-            this.btnConsultarPeriodos.Click += new System.EventHandler(this.btnConsultarPeriodos_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -105,7 +93,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 288);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnConsultarPeriodos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLancarDespesas);
@@ -123,7 +110,6 @@
         private System.Windows.Forms.Button btnLancarDespesas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnConsultarPeriodos;
         private System.Windows.Forms.Label label3;
     }
 }

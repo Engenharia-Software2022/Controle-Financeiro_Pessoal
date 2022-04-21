@@ -34,9 +34,7 @@ namespace ControleFinanceiro.VIEW
 
         private void btnConsultarPeriodos_Click(object sender, EventArgs e)
         {
-            frmPesquisar frm = new frmPesquisar();
-            frm.Show();
-            this.Hide();
+           
         }
     }
 }

@@ -234,7 +234,7 @@ namespace ControleFinanceiro.DAO
 
         #region Consultar receitas por periodo
 
-        
+       
 
 
 

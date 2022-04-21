@@ -21,7 +21,6 @@ C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\Co
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.frmReceitas.resources
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmRelatorio.resources
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmMenu.resources
-C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmPesquisar.resources
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\SqlServerTypes\x86\msvcr120.dll

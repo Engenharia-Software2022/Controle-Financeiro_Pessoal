@@ -59,6 +59,7 @@
             this.btnExcluirDespesa.TabIndex = 35;
             this.btnExcluirDespesa.Text = "Excluir";
             this.btnExcluirDespesa.UseVisualStyleBackColor = true;
+            this.btnExcluirDespesa.Click += new System.EventHandler(this.btnExcluirDespesa_Click);
             // 
             // label7
             // 
@@ -88,6 +89,7 @@
             this.btnAlterarDespesa.TabIndex = 32;
             this.btnAlterarDespesa.Text = "Alterar";
             this.btnAlterarDespesa.UseVisualStyleBackColor = true;
+            this.btnAlterarDespesa.Click += new System.EventHandler(this.btnAlterarDespesa_Click);
             // 
             // label6
             // 
@@ -115,9 +117,9 @@
             this.cbTitularDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTitularDespesa.FormattingEnabled = true;
             this.cbTitularDespesa.Items.AddRange(new object[] {
-            "Marcos Antonio Garcia",
-            "Ana Lúcia Batista Garcia",
-            "Samuel Gomes da Silva"});
+            "Marcos",
+            "Ana Lúcia",
+            "Samuel"});
             this.cbTitularDespesa.Location = new System.Drawing.Point(539, 90);
             this.cbTitularDespesa.Name = "cbTitularDespesa";
             this.cbTitularDespesa.Size = new System.Drawing.Size(203, 28);
@@ -133,6 +135,7 @@
             this.dgvDespesas.ReadOnly = true;
             this.dgvDespesas.Size = new System.Drawing.Size(776, 150);
             this.dgvDespesas.TabIndex = 27;
+            this.dgvDespesas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDespesas_CellClick);
             // 
             // btnCadastrarDespesa
             // 
@@ -207,7 +210,7 @@
             this.cbSelecionarDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSelecionarDespesa.FormattingEnabled = true;
             this.cbSelecionarDespesa.Items.AddRange(new object[] {
-            "DESPESAS"});
+            "despesas"});
             this.cbSelecionarDespesa.Location = new System.Drawing.Point(539, 126);
             this.cbSelecionarDespesa.Name = "cbSelecionarDespesa";
             this.cbSelecionarDespesa.Size = new System.Drawing.Size(203, 28);
@@ -269,6 +272,7 @@
             this.Controls.Add(this.txbValorDespesa);
             this.Name = "frmDespesas";
             this.Text = "frmDespesas";
+            this.Load += new System.EventHandler(this.frmDespesas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDespesas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

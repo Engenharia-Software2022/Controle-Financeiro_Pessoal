@@ -64,6 +64,7 @@ namespace ControleFinanceiro
 
         private void LimparCampos() 
         {
+            txbCodigo.Text = "";
             cbNomeTitular.Text = "";
             txbDescricaoEntrada.Text = "";
             txbValorEntrada.Text = "";
@@ -79,8 +80,7 @@ namespace ControleFinanceiro
         {
             if (cbNomeTitular.Text == "" || txbDescricaoEntrada.Text == "" || cbSelecionar_Receita.Text == "" || txbValorEntrada.Text == "" || dtpDataEntrada.Text == "")
             {
-                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
-                LimparCampos();
+                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");   
 
             }
             else
@@ -103,6 +103,8 @@ namespace ControleFinanceiro
 
                 //atualiza o datagridview
                 dgvEntradas.DataSource = dao.ListarTodasReceitas();
+
+                LimparCampos();
             } 
 
         }
@@ -116,8 +118,7 @@ namespace ControleFinanceiro
             if (cbNomeTitular.Text == "" || txbDescricaoEntrada.Text == "" || cbSelecionar_Receita.Text == "" || txbValorEntrada.Text == "" || dtpDataEntrada.Text == "")
             {
                 MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
-                LimparCampos();
-
+               
             }
             else
             {
@@ -128,6 +129,8 @@ namespace ControleFinanceiro
                 ReceitasDAO dao = new ReceitasDAO();
                 dao.Excluir(obj);
                 dgvEntradas.DataSource = dao.ListarTodasReceitas();
+
+                LimparCampos();
             }
         }
 
@@ -137,8 +140,8 @@ namespace ControleFinanceiro
         #region botão relatório
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
-            frmPesquisar frm = new frmPesquisar();
-            frm.ShowDialog();
+           frmRelatorio frm = new frmRelatorio();
+            frm.Show();
             this.Hide();
         }
 
@@ -159,9 +162,9 @@ namespace ControleFinanceiro
             cbNomeTitular.Text = dgvEntradas.CurrentRow.Cells[1].Value.ToString();
             txbDescricaoEntrada.Text = dgvEntradas.CurrentRow.Cells[2].Value.ToString();
             txbValorEntrada.Text = dgvEntradas.CurrentRow.Cells[3].Value.ToString();
-            dtpDataEntrada.Text = dgvEntradas.CurrentRow.Cells[4].Value.ToString();
-            cbSelecionar_Receita.Text = dgvEntradas.CurrentRow.Cells[5].Value.ToString();
-            
+            cbSelecionar_Receita.Text = dgvEntradas.CurrentRow.Cells[4].Value.ToString();
+            dtpDataEntrada.Text = dgvEntradas.CurrentRow.Cells[5].Value.ToString();
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

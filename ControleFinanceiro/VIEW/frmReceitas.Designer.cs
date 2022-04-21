@@ -64,7 +64,7 @@
             this.cbSelecionar_Receita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSelecionar_Receita.FormattingEnabled = true;
             this.cbSelecionar_Receita.Items.AddRange(new object[] {
-            "RECEITAS"});
+            "receitas"});
             this.cbSelecionar_Receita.Location = new System.Drawing.Point(508, 107);
             this.cbSelecionar_Receita.Name = "cbSelecionar_Receita";
             this.cbSelecionar_Receita.Size = new System.Drawing.Size(203, 28);
@@ -177,9 +177,9 @@
             this.cbNomeTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNomeTitular.FormattingEnabled = true;
             this.cbNomeTitular.Items.AddRange(new object[] {
-            "Marcos Antonio Garcia",
-            "Ana Lúcia Batista Garcia",
-            "Samuel Gomes da Silva"});
+            "Marcos",
+            "Ana Lúcia",
+            "Samuel"});
             this.cbNomeTitular.Location = new System.Drawing.Point(508, 71);
             this.cbNomeTitular.Name = "cbNomeTitular";
             this.cbNomeTitular.Size = new System.Drawing.Size(203, 28);

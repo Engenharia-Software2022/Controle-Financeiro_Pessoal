@@ -58,7 +58,53 @@ namespace ControleFinanceiro.VIEW
                 //LimparCampos();
 
                 dgvDespesas.DataSource = dao.ListarTodasDespesas();
+
+                LimparCampos();
             }
+        }
+
+        private void frmDespesas_Load(object sender, EventArgs e)
+        {
+            DespesasDAO dao = new DespesasDAO();
+            dgvDespesas.DataSource = dao.ListarTodasDespesas();
+        }
+
+        private void dgvDespesas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Carregando os dados do datagridview para os textbox clicando no item do datagridview
+
+            txbCodigoDespesa.Text = dgvDespesas.CurrentRow.Cells[0].Value.ToString();
+            cbTitularDespesa.Text = dgvDespesas.CurrentRow.Cells[1].Value.ToString();
+            txbDescricaoDespesa.Text = dgvDespesas.CurrentRow.Cells[2].Value.ToString();
+            txbValorDespesa.Text = dgvDespesas.CurrentRow.Cells[3].Value.ToString();
+            cbSelecionarDespesa.Text = dgvDespesas.CurrentRow.Cells[4].Value.ToString();
+            dtpDataDespesa.Text = dgvDespesas.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        #region Método limpar campos
+
+        private void LimparCampos() 
+        {
+            txbCodigoDespesa.Text = "";
+            cbTitularDespesa.Text = "";
+            txbDescricaoDespesa.Text = "";
+            txbValorDespesa.Text = "";
+            cbSelecionarDespesa.Text = "";
+            dtpDataDespesa.Text = "";
+        }
+
+
+
+        #endregion
+
+        private void btnAlterarDespesa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluirDespesa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
