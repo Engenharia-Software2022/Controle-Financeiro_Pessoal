@@ -38,7 +38,7 @@
             // btn_LancarReceitas
             // 
             this.btn_LancarReceitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LancarReceitas.Location = new System.Drawing.Point(67, 120);
+            this.btn_LancarReceitas.Location = new System.Drawing.Point(72, 120);
             this.btn_LancarReceitas.Name = "btn_LancarReceitas";
             this.btn_LancarReceitas.Size = new System.Drawing.Size(150, 74);
             this.btn_LancarReceitas.TabIndex = 0;
@@ -81,6 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(126, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(313, 25);
@@ -91,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(556, 288);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -98,7 +100,7 @@
             this.Controls.Add(this.btnLancarDespesas);
             this.Controls.Add(this.btn_LancarReceitas);
             this.Name = "frmMenu";
-            this.Text = "frmMenu";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

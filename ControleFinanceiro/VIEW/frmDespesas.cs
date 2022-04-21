@@ -33,35 +33,7 @@ namespace ControleFinanceiro.VIEW
 
         }
 
-        private void btnCadastrarDespesa_Click(object sender, EventArgs e)
-        {
-            if (cbTitularDespesa.Text == "" || txbDescricaoDespesa.Text == "" || cbSelecionarDespesa.Text == "" || txbValorDespesa.Text == "" || dtpDataDespesa.Text == "")
-            {
-                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
-               // LimparCampos();
-
-            }
-            else
-            {
-                Despesas  obj = new Despesas();
-
-                obj.nome = cbTitularDespesa.Text;
-                obj.descricaosaida = txbDescricaoDespesa.Text;
-                obj.valorsaida = txbValorDespesa.Text;
-                obj.selecionarsaida = cbSelecionarDespesa.Text;
-                obj.datasaida = Convert.ToDateTime(dtpDataDespesa.Text);
-                
-
-                DespesasDAO dao = new DespesasDAO();
-                dao.InserirDespesas(obj);
-
-                //LimparCampos();
-
-                dgvDespesas.DataSource = dao.ListarTodasDespesas();
-
-                LimparCampos();
-            }
-        }
+       
 
         private void frmDespesas_Load(object sender, EventArgs e)
         {
@@ -105,6 +77,36 @@ namespace ControleFinanceiro.VIEW
         private void btnExcluirDespesa_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (cbTitularDespesa.Text == "" || txbDescricaoDespesa.Text == "" || cbSelecionarDespesa.Text == "" || txbValorDespesa.Text == "" || dtpDataDespesa.Text == "")
+            {
+                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
+                // LimparCampos();
+
+            }
+            else
+            {
+                Despesas obj = new Despesas();
+
+                obj.nome = cbTitularDespesa.Text;
+                obj.descricaosaida = txbDescricaoDespesa.Text;
+                obj.valorsaida = txbValorDespesa.Text;
+                obj.selecionarsaida = cbSelecionarDespesa.Text;
+                obj.datasaida = Convert.ToDateTime(dtpDataDespesa.Text);
+
+
+                DespesasDAO dao = new DespesasDAO();
+                dao.InserirDespesas(obj);
+
+                //LimparCampos();
+
+                dgvDespesas.DataSource = dao.ListarTodasDespesas();
+
+                LimparCampos();
+            }
         }
     }
 }

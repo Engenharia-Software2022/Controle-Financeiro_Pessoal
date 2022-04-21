@@ -20,7 +20,9 @@ namespace ControleFinanceiro.VIEW
         private void frmRelatorio_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'financeiroDataSet.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
-            this.data.Fill(this.financeiroDataSet.DataTable1);
+            this.dataTable1TableAdapter.Fill(this.financeiroDataSet.DataTable1);
+            // TODO: esta linha de código carrega dados na tabela 'financeiroDataSet.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
+            this.dataTable1TableAdapter.Fill(this.financeiroDataSet.DataTable1);
 
             this.reportViewer1.RefreshReport();
         }

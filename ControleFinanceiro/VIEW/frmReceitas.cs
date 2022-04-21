@@ -25,14 +25,15 @@ namespace ControleFinanceiro
 
         }
 
-        #region Botão Cadastrar
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        #region Botão Salvar
+
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (cbNomeTitular.Text == "" || txbDescricaoEntrada.Text == "" || cbSelecionar_Receita.Text == "" || txbValorEntrada.Text == "" || dtpDataEntrada.Text == "")
             {
                 MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
                 LimparCampos();
-                
+
             }
             else
             {
@@ -53,13 +54,13 @@ namespace ControleFinanceiro
 
                 dgvEntradas.DataSource = dao.ListarTodasReceitas();
             }
-
         }
+
 
         #endregion
 
 
-        
+
         #region Método limpar campos
 
         private void LimparCampos() 
@@ -76,11 +77,13 @@ namespace ControleFinanceiro
 
 
         #region Botão alterar
-        private void btnAlterarReceita_Click(object sender, EventArgs e)
+
+
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
             if (cbNomeTitular.Text == "" || txbDescricaoEntrada.Text == "" || cbSelecionar_Receita.Text == "" || txbValorEntrada.Text == "" || dtpDataEntrada.Text == "")
             {
-                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");   
+                MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
 
             }
             else
@@ -105,20 +108,19 @@ namespace ControleFinanceiro
                 dgvEntradas.DataSource = dao.ListarTodasReceitas();
 
                 LimparCampos();
-            } 
-
+            }
         }
-
         #endregion
 
 
         #region botão excluir
-        private void btnExcluir_Click(object sender, EventArgs e)
+
+        private void btnEcluir_Click(object sender, EventArgs e)
         {
             if (cbNomeTitular.Text == "" || txbDescricaoEntrada.Text == "" || cbSelecionar_Receita.Text == "" || txbValorEntrada.Text == "" || dtpDataEntrada.Text == "")
             {
                 MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
-               
+
             }
             else
             {
@@ -138,9 +140,10 @@ namespace ControleFinanceiro
 
 
         #region botão relatório
-        private void btnRelatorio_Click(object sender, EventArgs e)
+
+        private void btnRelatorio_Click_1(object sender, EventArgs e)
         {
-           frmRelatorio frm = new frmRelatorio();
+            frmRelatorio frm = new frmRelatorio();
             frm.Show();
             this.Hide();
         }
@@ -175,6 +178,11 @@ namespace ControleFinanceiro
         }
 
         private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

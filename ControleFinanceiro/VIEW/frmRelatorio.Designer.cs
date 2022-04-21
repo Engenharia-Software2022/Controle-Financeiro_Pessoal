@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.financeiroDataSet = new ControleFinanceiro.financeiroDataSet();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.data = new ControleFinanceiro.financeiroDataSetTableAdapters.Data();
-            ((System.ComponentModel.ISupportInitialize)(this.financeiroDataSet)).BeginInit();
+            this.financeiroDataSet = new ControleFinanceiro.financeiroDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataTable1TableAdapter = new ControleFinanceiro.financeiroDataSetTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.financeiroDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.financeiroDataSet;
+            // 
+            // financeiroDataSet
+            // 
+            this.financeiroDataSet.DataSetName = "financeiroDataSet";
+            this.financeiroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,19 +61,9 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // financeiroDataSet
+            // dataTable1TableAdapter
             // 
-            this.financeiroDataSet.DataSetName = "financeiroDataSet";
-            this.financeiroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.financeiroDataSet;
-            // 
-            // data
-            // 
-            this.data.ClearBeforeFill = true;
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // frmRelatorio
             // 
@@ -72,10 +72,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmRelatorio";
-            this.Text = "frmRelatorio";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmRelatorio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.financeiroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.financeiroDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,6 +85,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private financeiroDataSet financeiroDataSet;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private financeiroDataSetTableAdapters.Data data;
+        private financeiroDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
     }
 }
