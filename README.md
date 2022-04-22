@@ -46,23 +46,22 @@ Para utilizar o sistema de cadastro o usuário deverá:
 ***
 ### Tela de Login do Sistema
 
-
-![Tela de Login](https://github.com/Engenharia-Software2022/AplicacaoCadastroCamadas/blob/main)
-
-![Menu Principal](https://github.com/Engenharia-Software2022/AplicacaoCadastroCamadas/blob/main)
-
-![Tela de Cadastro de Receitas](https://github.com/Engenharia-Software2022/AplicacaoCadastroCamadas/blob/main)
-
-![Tela de Cadastro de Despesas](https://github.com/Engenharia-Software2022/AplicacaoCadastroCamadas/blob/main)
-
-![Tela de Relatórios](https://github.com/Engenharia-Software2022/AplicacaoCadastroCamadas/blob/main)
-
-
-
-
+![Tela de Login](https://github.com/Engenharia-Software2022/AgendaWeb/blob/main/TelaLogin.PNG)
 
 ***
+### Lançamentos de Receitas
 
+![Menu Principal](https://github.com/Engenharia-Software2022/AgendaWeb/blob/main/Lan%C3%A7amentoReceita.PNG)
+
+***
+###Lançamentos de Despesas
+
+![Tela de Cadastro de Receitas](https://github.com/Engenharia-Software2022/AgendaWeb/blob/main/Lan%C3%A7amentoDespesa.PNG)
+
+***
+###Tela de Relatórios para impressão
+
+![Tela de Cadastro de Despesas](https://github.com/Engenharia-Software2022/AgendaWeb/blob/main/Relat%C3%B3rio.PNG)
 
 
 ### Licenças
