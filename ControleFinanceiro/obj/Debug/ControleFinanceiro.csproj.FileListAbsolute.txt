@@ -73,3 +73,5 @@ C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\pt
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\bin\Debug\Guna.UI2.dll
+C:\Users\Marcos\source\repos2\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.VIEW.frmLogin.resources

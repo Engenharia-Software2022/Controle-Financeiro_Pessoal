@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.btn_LancarReceitas = new System.Windows.Forms.Button();
             this.btnLancarDespesas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,22 +39,28 @@
             // btn_LancarReceitas
             // 
             this.btn_LancarReceitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LancarReceitas.Location = new System.Drawing.Point(72, 120);
+            this.btn_LancarReceitas.Image = ((System.Drawing.Image)(resources.GetObject("btn_LancarReceitas.Image")));
+            this.btn_LancarReceitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LancarReceitas.Location = new System.Drawing.Point(56, 119);
             this.btn_LancarReceitas.Name = "btn_LancarReceitas";
-            this.btn_LancarReceitas.Size = new System.Drawing.Size(150, 74);
+            this.btn_LancarReceitas.Size = new System.Drawing.Size(185, 87);
             this.btn_LancarReceitas.TabIndex = 0;
             this.btn_LancarReceitas.Text = "Lançar Receitas";
+            this.btn_LancarReceitas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_LancarReceitas.UseVisualStyleBackColor = true;
             this.btn_LancarReceitas.Click += new System.EventHandler(this.btn_LancarReceitas_Click);
             // 
             // btnLancarDespesas
             // 
             this.btnLancarDespesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLancarDespesas.Location = new System.Drawing.Point(313, 120);
+            this.btnLancarDespesas.Image = ((System.Drawing.Image)(resources.GetObject("btnLancarDespesas.Image")));
+            this.btnLancarDespesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLancarDespesas.Location = new System.Drawing.Point(302, 119);
             this.btnLancarDespesas.Name = "btnLancarDespesas";
-            this.btnLancarDespesas.Size = new System.Drawing.Size(150, 74);
+            this.btnLancarDespesas.Size = new System.Drawing.Size(194, 87);
             this.btnLancarDespesas.TabIndex = 1;
             this.btnLancarDespesas.Text = "Lançar Despesas";
+            this.btnLancarDespesas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLancarDespesas.UseVisualStyleBackColor = true;
             this.btnLancarDespesas.Click += new System.EventHandler(this.btnLancarDespesas_Click);
             // 
@@ -82,11 +89,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(126, 52);
+            this.label3.Location = new System.Drawing.Point(172, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(313, 25);
+            this.label3.Size = new System.Drawing.Size(206, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Sistema de Controle Financeiro";
+            this.label3.Text = "O que deseja fazer?";
             // 
             // frmMenu
             // 
@@ -99,8 +106,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLancarDespesas);
             this.Controls.Add(this.btn_LancarReceitas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

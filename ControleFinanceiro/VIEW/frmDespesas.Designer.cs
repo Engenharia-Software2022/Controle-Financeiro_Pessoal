@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDespesas));
-            this.btnExcluirDespesa = new System.Windows.Forms.Button();
-            this.btnAlterarDespesa = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCadastrarDespesa = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,28 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExcluirDespesa
-            // 
-            this.btnExcluirDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirDespesa.Location = new System.Drawing.Point(668, 363);
-            this.btnExcluirDespesa.Name = "btnExcluirDespesa";
-            this.btnExcluirDespesa.Size = new System.Drawing.Size(132, 37);
-            this.btnExcluirDespesa.TabIndex = 35;
-            this.btnExcluirDespesa.Text = "Excluir";
-            this.btnExcluirDespesa.UseVisualStyleBackColor = true;
-            this.btnExcluirDespesa.Click += new System.EventHandler(this.btnExcluirDespesa_Click);
-            // 
-            // btnAlterarDespesa
-            // 
-            this.btnAlterarDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarDespesa.Location = new System.Drawing.Point(668, 406);
-            this.btnAlterarDespesa.Name = "btnAlterarDespesa";
-            this.btnAlterarDespesa.Size = new System.Drawing.Size(132, 37);
-            this.btnAlterarDespesa.TabIndex = 32;
-            this.btnAlterarDespesa.Text = "Alterar";
-            this.btnAlterarDespesa.UseVisualStyleBackColor = true;
-            this.btnAlterarDespesa.Click += new System.EventHandler(this.btnAlterarDespesa_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -91,17 +66,6 @@
             this.label6.Size = new System.Drawing.Size(141, 37);
             this.label6.TabIndex = 31;
             this.label6.Text = "10:34:36";
-            // 
-            // btnCadastrarDespesa
-            // 
-            this.btnCadastrarDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarDespesa.Location = new System.Drawing.Point(530, 363);
-            this.btnCadastrarDespesa.Name = "btnCadastrarDespesa";
-            this.btnCadastrarDespesa.Size = new System.Drawing.Size(132, 37);
-            this.btnCadastrarDespesa.TabIndex = 26;
-            this.btnCadastrarDespesa.Text = "Cadastrar";
-            this.btnCadastrarDespesa.UseVisualStyleBackColor = true;
-           
             // 
             // btnSair
             // 
@@ -308,6 +272,7 @@
             this.btnSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalvar.TabIndex = 39;
             this.btnSalvar.TabStop = false;
+            this.btnSalvar.Tag = "";
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmDespesas
@@ -322,12 +287,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnExcluirDespesa);
-            this.Controls.Add(this.btnAlterarDespesa);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnCadastrarDespesa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDespesas";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmDespesas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -341,11 +305,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnExcluirDespesa;
-        private System.Windows.Forms.Button btnAlterarDespesa;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnCadastrarDespesa;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.GroupBox groupBox1;
