@@ -30,7 +30,6 @@ namespace ControleFinanceiro.DAO
             {
                 string sql = @"insert into receitas (nometitular, descricaoentrada, valorentrada,dataentrada, selecionarentrada) values (@nometitular,@descricaoentrada,@valorentrada,@dataentrada, @selecionarentrada)";
 
-
                 //2 passo - organizar o sql
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
