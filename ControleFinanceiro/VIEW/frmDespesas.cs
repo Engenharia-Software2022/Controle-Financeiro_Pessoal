@@ -33,8 +33,6 @@ namespace ControleFinanceiro.VIEW
 
         }
 
-       
-
         private void frmDespesas_Load(object sender, EventArgs e)
         {
             DespesasDAO dao = new DespesasDAO();
@@ -85,7 +83,6 @@ namespace ControleFinanceiro.VIEW
             {
                 MessageBox.Show("Campos vazios não são permitidos! Preencha todos os campos.");
                 // LimparCampos();
-
             }
             else
             {
@@ -96,7 +93,6 @@ namespace ControleFinanceiro.VIEW
                 obj.valorsaida = txbValorDespesa.Text;
                 obj.selecionarsaida = cbSelecionarDespesa.Text;
                 obj.datasaida = Convert.ToDateTime(dtpDataDespesa.Text);
-
 
                 DespesasDAO dao = new DespesasDAO();
                 dao.InserirDespesas(obj);
