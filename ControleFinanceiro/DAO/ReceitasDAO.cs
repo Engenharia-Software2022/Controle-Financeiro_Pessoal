@@ -54,7 +54,6 @@ namespace ControleFinanceiro.DAO
                 MessageBox.Show("Aconteceu o erro: " + erro);
             }
         }
-
         #endregion
 
 
@@ -128,7 +127,6 @@ namespace ControleFinanceiro.DAO
         }
 
         #endregion
-
 
 
 
