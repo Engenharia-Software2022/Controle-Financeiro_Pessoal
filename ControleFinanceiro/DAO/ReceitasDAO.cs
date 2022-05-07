@@ -21,6 +21,7 @@ namespace ControleFinanceiro.DAO
         }
 
 
+        
         #region método inserir receitas no banco
 
         public void InserirReceitas(Receitas obj)
