@@ -42,7 +42,6 @@ namespace ControleFinanceiro.VIEW
         private void dgvDespesas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Carregando os dados do datagridview para os textbox clicando no item do datagridview
-
             txbCodigoDespesa.Text = dgvDespesas.CurrentRow.Cells[0].Value.ToString();
             cbTitularDespesa.Text = dgvDespesas.CurrentRow.Cells[1].Value.ToString();
             txbDescricaoDespesa.Text = dgvDespesas.CurrentRow.Cells[2].Value.ToString();
